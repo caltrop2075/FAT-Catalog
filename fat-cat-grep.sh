@@ -6,4 +6,4 @@
 
 clear
 
-grep -EHi "$1" ~/data/fat-cat-32GB*.dat --color
+grep -EHi "$1" ~/data/fat-cat-*.dat --color
