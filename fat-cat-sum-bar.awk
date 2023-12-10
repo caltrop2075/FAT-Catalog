@@ -12,39 +12,39 @@ BEGIN {
       switch(i)                           # color
       {
          case 1 :
-            printf("\033[0;35m")
+            printf("\033[0;35m")          # magenta
             break
          case 2 :
-            printf("\033[0;34m")
+            printf("\033[0;34m")          # blue
             break
          case 3 :
-            printf("\033[0;36m")
+            printf("\033[0;36m")          # cyan
             break
          case 4 :
-            printf("\033[0;32m")
+            printf("\033[0;32m")          # green
             break
          case 5 :
-            printf("\033[0;33m")
+            printf("\033[0;33m")          # yellow
             break
          case 6 :
-            printf("\033[0;31m")
+            printf("\033[0;31m")          # red
             break
       }
       y=int(x*i)-int(x*(i-1))
       for(j=0;j<y;j++)
          switch(i)                        # bar ░ ▒ ▓ █
          {
-            case 1 :
-            case 2 :
-            case 3 :
-            case 5 :
+            case 6 :                      # red
+               printf("█")
+               break
+            case 1 :                      # magenta
+            case 2 :                      # blue
+            case 4 :                      # green
+            case 5 :                      # yellow
                printf("▓")
                break
-            case 4 :
+            case 3 :                      # cyan
                printf("▒")
-               break
-            case 6 :
-               printf("█")
                break
             default :
                printf("░")

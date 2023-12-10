@@ -22,36 +22,36 @@ BEGIN {
       }
    }
 # --------------------------------------------------------------------- bargraph
-   p=a[1]/a[3]                      # raw percent use
-   q=int(p*x+0.5)                   # bar length
-   b="█"                            # ░ ▒ ▓ █
+   p=a[1]/a[3]                    # raw percent use
+   q=int(p*x+0.5)                 # bar length
+   b="█"                          # ░ ▒ ▓ █
    if(p<=0.17)
    {
-      s="\033[0;35m"
+      s="\033[0;35m"              # magenta
       b="▓"
    }
    else if(p<=0.33)
    {
-      s="\033[0;34m"
+      s="\033[0;34m"                # blue
       b="▓"
    }
    else if(p<=0.50)
    {
-      s="\033[0;36m"
-      b="▓"
+      s="\033[0;36m"                # cyan
+      b="▒"
    }
    else if(p<=0.67)
    {
-      s="\033[0;32m"
-      b="▒"
+      s="\033[0;32m"                # green
+      b="▓"
    }
    else if(p<=0.83)
    {
-      s="\033[0;33m"
+      s="\033[0;33m"                # yellow
       b="▓"
    }
    else
-      s="\033[0;31m"
+      s="\033[0;31m"                # red
    for(i=0;i<q;i++)                 # left bar
       s=s b
    # s=s"\033[1;30m"                # won't work with Terminator

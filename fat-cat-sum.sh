@@ -2,10 +2,12 @@
 #------------------------------------------------------------------------------#
 #                            Programmed By Liz                                 #
 #------------------------------------------------------------------------------#
-# fat-cat-*.dat summary
+# fat-cat color data summary
 # new & improved format & wider bargraph
 # now with variable width, just mod w=?, 117 optimum for tile left/right
 # added DEAD!/NOT IN USE/whatever, must be last line in file
+#
+clear
 
 w=117                                                 # width
 o=$(($w-40))                                          # first column width
